@@ -5,6 +5,7 @@ import edukacija2 from "../../sliki/za_nas/edukacija2.jpg";
 import nastani from "../../sliki/za_nas/nastani.jpg";
 import coworking from "../../sliki/za_nas/coworking.jpg";
 import prostor_za_nastani from "../../sliki/za_nas/prostor za nastani.jpg";
+import { Link } from "react-router-dom";
 
 
 import "./Homepage.scss";
@@ -14,7 +15,7 @@ const HomepageZaNas = () => {
   return (
     <div className="homepage-zanas">
         <h1>За Нас</h1>
-        <div className="homepage-zanas-card">
+        <a href="https://brainster.co/" className="homepage-zanas-card">
           <div className="img-div">
             <img src={edukacija} alt=""/>
           </div>
@@ -24,10 +25,10 @@ const HomepageZaNas = () => {
             <p>Научи практични вештини за трансформација во кариерата. Нашата специјалност е да ти помогнеме да го најдеш правилниот skil set кој ќе одговори на реалните потреби на на пазарот на труд. Организираме курсеви, академии и персонализирани обуки кои одговараат на реалните потреби на денешницата.</p>
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
-        </div>
+        </a>
 
 
-        <div className="homepage-zanas-card">
+        <Link to="/nastani" className="homepage-zanas-card">
           <div className="img-div">
             <img src={nastani} alt=""/>
           </div>
@@ -37,7 +38,7 @@ const HomepageZaNas = () => {
             <p>Специјално курирани и организирани настани кои ги поврзуваат правите таленти со иновативните компании. Идејата е да нашата tech заедница расте, се инсталира и креира преку овие настани.</p>
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
-        </div>
+        </Link>
 
 
         <div className="homepage-zanas-card">
@@ -52,7 +53,7 @@ const HomepageZaNas = () => {
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </div>
 
-        <div className="homepage-zanas-card">
+        <Link to="/nastani" className="homepage-zanas-card">
           <div className="img-div">
             <img src={prostor_za_nastani} alt=""/>
           </div>
@@ -62,7 +63,7 @@ const HomepageZaNas = () => {
             <p>Имаш идеја за обука или настан од tech областа? Ние имаме простор за реализација. Нашиот тим внимателно ги одбира и крира сите настани.</p>
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
-        </div>
+        </Link>
 
         <div className="homepage-zanas-card">
           <div className="img-div">
