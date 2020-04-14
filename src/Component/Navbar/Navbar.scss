@@ -9,7 +9,7 @@ $yellow-color:#FCD232;
         flex-grow: 1;
         display: flex;
         
-        a {
+        a, button {
             margin-left:30px;
             color: black;
             font-weight: bold;
@@ -20,6 +20,10 @@ $yellow-color:#FCD232;
                 border-bottom: 2px solid $yellow-color;
             }
 
+        }
+        button{
+            background-color: transparent;
+            border:none;
         }
         
     }

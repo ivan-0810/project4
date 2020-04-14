@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import "./Homepage.scss";
 
 
-const HomepageZaNas = () => {
+const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
   return (
     <div className="homepage-zanas">
         <h1>За Нас</h1>
@@ -65,7 +65,7 @@ const HomepageZaNas = () => {
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </Link>
 
-        <div className="homepage-zanas-card">
+        <div className="homepage-zanas-card" onClick={() => setPartnerstvaForma(true)}>
           <div className="img-div">
             <img src={edukacija1} alt=""/>
           </div>
@@ -77,7 +77,7 @@ const HomepageZaNas = () => {
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </div>
 
-        <div className="homepage-zanas-card">
+        <div className="homepage-zanas-card" onClick={()=>setInovaciiForma(true)}>
           <div className="img-div">
             <img src={edukacija2} alt=""/>
           </div>
