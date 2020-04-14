@@ -1,0 +1,76 @@
+.homepage-header {
+    height:85vh;
+   
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: white;
+            font-weight: bold;
+        }
+    }
+    
+  
+}
+.homepage-zanas {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 50px auto;
+    h1{
+        width: 100%;
+        margin: 50px auto;
+        font-weight: bold;
+        text-align: center;
+    }
+    .homepage-zanas-card{
+        flex-basis: 30%;
+        height: 530px;
+        border-radius: 4px;
+        border: 1px solid lightgray;
+        margin-bottom: 20px;
+        position: relative;
+        .img-div{
+            height: 250px;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .txt-div {
+            width: 90%;
+            text-align: left;
+            margin: 20px auto 0;
+            h3{
+                font-size: 18px;
+                font-weight: bold;
+        
+            }
+            p{
+                font-size: 13px;
+            }
+           
+        }
+        span {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            margin: 20px;
+            width: 20px;
+            height: 20px;
+            padding: 20px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    }
+}

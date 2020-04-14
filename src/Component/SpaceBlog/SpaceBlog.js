@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "../Navbar/Navbar"
-function SpaceBlog(props) {
+const SpaceBlog = (props)=>{
     return (
         <div>
             <Navbar />
