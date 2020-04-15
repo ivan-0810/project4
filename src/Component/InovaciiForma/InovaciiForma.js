@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./InovaciiForma.scss";
 
 const InovaciiForma = ({setInovaciiForma}) => {
+    const [ime, setIme] = useState("")
+const handleSubmit = () => {
+    console.log(ime);
+    
+}
+
   return (
     <div className="inovacii-forma">
        <div className="overlay">
                 
-                <form action="@">
+                <form action="@" onSubmit={handleSubmit}>
                    <div className="form-box1">
                         <div className="label-input">
                         <label htmlFor="">Име и Презиме(задолжително)</label>
-                        <input type="text" placeholder="Внесете Име и Презиме" />
+                        <input type="text" 
+                        placeholder="Внесете Име и Презиме" />
                     </div>
                     <div className="label-input">
                         <label htmlFor="">Име и Компанија(незадолжително)</label>
@@ -34,8 +41,8 @@ const InovaciiForma = ({setInovaciiForma}) => {
                     </div>
             
                         <div className="btn-forma-div">
-                        <button className="isprati" onClick={() => setInovaciiForma(false)}>исклучи</button>
-                        <button type="submit"  className="priklucise"><i className="fas fa-arrow-right"></i>испрати форма</button>
+                        <button className="isprati" onClick={() => setInovaciiForma(false)}>врати се назад</button>
+                        <button type="submit"  className="priklucise"><i className="fas fa-arrow-right"></i>СЌубмитирај</button>
                         </div>
                   
                     </div>
