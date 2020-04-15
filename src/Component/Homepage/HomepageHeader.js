@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Homepage.scss";
+import "./HomePage.scss";
 
 const HomepageHeader = (props) =>{
     return (

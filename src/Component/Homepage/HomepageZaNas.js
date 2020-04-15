@@ -8,7 +8,7 @@ import prostor_za_nastani from "../../sliki/za_nas/prostor za nastani.jpg";
 import { Link } from "react-router-dom";
 
 
-import "./Homepage.scss";
+import "./HomePage.scss";
 
 
 const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {

@@ -5,6 +5,11 @@ import HomepageHeader from "../Homepage/HomepageHeader";
 import HomepageZaNas from './HomepageZaNas';
 import PartnerstvaForma from "../ParnerstvaForma/PartnerstvaForma";
 import InovaciiForma from "../InovaciiForma/InovaciiForma";
+import Edukacija from './Edukacija';
+import HomepageNastani from "./HomepageNastani";
+import HomepageCoworking from './HomepageCoworking';
+import HomepageProstorZaNastani from "./HomepageProstorZaNastani"
+import Footer from '../footer/Footer';
 const Homepage = () => {
     const [ navbarBtnForma, setNavbarBtnForma]= useState(false);
     const [ partnerstvaForma, setPartnerstvaForma] = useState(false);
@@ -17,6 +22,11 @@ const Homepage = () => {
         {inovaciiForma && <InovaciiForma setInovaciiForma={setInovaciiForma} />}
         <HomepageHeader />
         <HomepageZaNas  setPartnerstvaForma={setPartnerstvaForma} setInovaciiForma={setInovaciiForma} />
+        <Edukacija />
+        <HomepageNastani />
+        <HomepageCoworking />
+        <HomepageProstorZaNastani />
+        <Footer />
     </div>
   );
 }
