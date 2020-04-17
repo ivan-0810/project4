@@ -1,3 +1,4 @@
+@import "../../Base";
 
 .navbar-btn-forma {
     width: 100%;
@@ -5,13 +6,11 @@
     position: fixed;
     top:0;
     background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
     .nazad{
         position: absolute;
-    top: 50px;
-    left: 100px;
+        top: 50px;
+        left: 100px;
  
         i {
             font-size: 11px;
@@ -19,8 +18,7 @@
         }
      }
      .btn-style {
-        background-color: black;
-        color: yellow;
+        @extend %crnokopce;
         padding: 3px 15px;
         border-radius: 4px;
         text-decoration: none;
@@ -28,8 +26,7 @@
      }
     
     form {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         border: 2px solid black;
         padding: 40px;
         div {

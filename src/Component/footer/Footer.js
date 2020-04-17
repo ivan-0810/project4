@@ -10,9 +10,10 @@ const Footer = () => {
                 <h4>корисни линкови</h4>
                 <button onClick={() => setShowContact(true)}>контакт</button>
                 {showContact && <div className="popupKontakt">
+                <span><i className="fas fa-times" onClick={() => setShowContact(false)}></i></span>
                     <p>Емаил: anja@brainster.co</p>
                     <p>телефон: 070 233 414</p>
-                    <button onClick={() => setShowContact(false)}>затвори</button>
+
                 </div>}
                 <a href="https://www.wearelaika.com/">отворени позиции</a>
                 <a href="https://medium.com/wearelaika/brainster-space-the-new-home-of-the-local-tech-community-in-skopje-ffe97b564152">галерија</a>

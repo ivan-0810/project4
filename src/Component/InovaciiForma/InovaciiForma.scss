@@ -1,3 +1,5 @@
+@import "../../Base";
+
 .inovacii-forma {
     width: 100%;
     position: fixed;
@@ -8,9 +10,7 @@
     .overlay {
         height: 100%;
         background-color: rgba(0,0,0,0.9);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         
         form {
             background-color: #FCD232;
@@ -19,8 +19,7 @@
             border-radius: 4px;
             display: flex;
             div{
-                display: flex;
-                flex-direction: column;
+                @extend %flex-column;
                 width: 90%;
                 margin: 10px auto;
                 label {
@@ -43,8 +42,7 @@
 
             }
             .btn-forma-div{
-                display: flex;
-                flex-direction: row;
+                @extend %flex-row;
                 justify-content: flex-end;
                 padding: 53px 0 0;
                 button{
@@ -62,8 +60,7 @@
                     font-size: 11px;
                         }
                     
-                    background-color: black;
-                    color: #FCD232;
+                        @extend %crnokopce;
                 }
             }
         }

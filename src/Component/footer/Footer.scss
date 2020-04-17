@@ -1,14 +1,11 @@
-%flex {
-    display: flex;
-    flex-direction: column;
-}
+@import "../../Base";
 .footer {
     display: flex;
     padding: 150px 20px;
     margin: 0 auto;
     border-top: 2px solid lightgray;
      div{
-        @extend %flex;
+        @extend %flex-column;
 
         h4,a button{
             text-transform: capitalize;
@@ -68,6 +65,21 @@
     position: fixed;
     top: 37vh;
     left: 19%;
+    span{
+        @extend %flex-center;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        i{
+            color: white;
+            font-size: 10px;
+        }
+    }
     p{
         color: black;
         font-weight: bold;
@@ -82,6 +94,6 @@
 }
 .logo {
     img {
-        width: 80px;
+        width: 70px;
     }
 }
