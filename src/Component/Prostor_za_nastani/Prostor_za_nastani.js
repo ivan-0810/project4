@@ -10,19 +10,23 @@ import p5 from "../../sliki/renderi/C3 1.jpg";
 import p6 from "../../sliki/renderi/C3 2.jpg";
 import p7 from "../../sliki/renderi/C3 EXIBITION_1.jpg";
 import p8 from "../../sliki/renderi/HOL KON SEDENJE.jpg";
-import p9 from "../../sliki/nastani/instruktori.jpg";
+import p9 from "../../sliki/KITCHEN_03.jpg";
+import Box1 from './Box1';
+import Box2 from './Box2';
+import Box3 from './Box3';
+import Box4 from "./Box4";
 
 const Prostor_za_nastani = () => {
     const [nasloviSliki] = useState(["Brainster", "Конференциска Сала", "Сала со бина", "Адептибилна училница", "Училница", "Училница", "Хол", "Канцелариски простор", "Space Kitchen"]);
     const [sliki] = useState({
         1: p1,
-        2: p5,
+        2: p7,
         3: p6,
-        4: p4,
-        5: p2,
-        6: p3,
-        7: p7,
-        8: p8,
+        4: p5,
+        5: p4,
+        6: p2,
+        7: p8,
+        8: p3,
         9: p9
     })
     return (
@@ -30,36 +34,19 @@ const Prostor_za_nastani = () => {
             <Navbar />
             <div className="prostor-za-nastani">
                 <div className="box-1">
-                    <div className="txt-div">
-                        <TextDiv
-                            h1="Простор за настани"
-                            text={["Нашиот простор се прилагодува според потребите на вашиот настан. Седум различни простории и Space Kitchen.", "Наменски создадени да се прилагодуваат и менуваат во согласност со типот на настан кој го организирате.", "Организиеаме конференции до 150 учесници и обуки и предавања за групи од 20 учесници. Контактирај не за да ви хостираме одличен настан."]} />
-                        <button><i className="fas fa-plus"></i> букирај не</button>
-                    </div>
-                    <div className="img-div" >
-                        <img src={require(`../../sliki/za_nas/prostor za nastani.jpg`)} alt="" />
-                    </div>
+                    <Box1 />
                 </div>
                 <div className="box-2">
-                    <div className="txt-div">
-                        <TextDiv
-                            h1="Нашите простории"
-                            text={["Комплетно адаптибилни. Една сала за 150 учесници или три помали сали за групи од по 50 учесника. Училници од 25 до 40 учесника. Избор од две локации.", "Пулт за прием. И најважното место за networking- Brainster Kitchen.", "Како го замислувате вашиот следен настан?"]} />
-                    </div>
-                    <div className="img-div" >
-                        {nasloviSliki.map((naslov, inx) => (
-                            <div key={inx} >
-                                <div className="image">
-                                <img src={sliki[inx + 1]} alt={naslov} />
-                                </div>
-                                <p >{naslov}</p>
-                            </div>
-
-
-                        ))}
-                    </div>
-
-
+                    <Box2
+                        nasloviSliki={nasloviSliki}
+                        sliki={sliki}
+                    />
+                </div>
+                <div className="box-3">
+                    <Box3 />
+                </div>
+                <div className="box-4">
+                    <Box4 />
                 </div>
 
             </div>
