@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 
 import "./HomePage.scss";
+import TextDiv from '../Prostor_za_nastani/TextDiv';
 
 
 const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
@@ -20,9 +21,10 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
             <img src={edukacija} alt=""/>
           </div>
           <div className="txt-div">
-          <h3>Едукација</h3>
-          
-            <p>Научи практични вештини за трансформација во кариерата. Нашата специјалност е да ти помогнеме да го најдеш правилниот skil set кој ќе одговори на реалните потреби на на пазарот на труд. Организираме курсеви, академии и персонализирани обуки кои одговараат на реалните потреби на денешницата.</p>
+            <TextDiv
+              h3="Едукација"
+              text={["Научи практични вештини за трансформација во кариерата. Нашата специјалност е да ти помогнеме да го најдеш правилниот skil set кој ќе одговори на реалните потреби на на пазарот на труд. Организираме курсеви, академии и персонализирани обуки кои одговараат на реалните потреби на денешницата."]}
+            />
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </a>
@@ -33,9 +35,10 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
             <img src={nastani} alt=""/>
           </div>
           <div className="txt-div">
-          <h3>Настани</h3>
-          
-            <p>Специјално курирани и организирани настани кои ги поврзуваат правите таленти со иновативните компании. Идејата е да нашата tech заедница расте, се инсталира и креира преку овие настани.</p>
+            <TextDiv 
+              h3="Настани"
+              text={["Специјално курирани и организирани настани кои ги поврзуваат правите таленти со иновативните компании. Идејата е да нашата tech заедница расте, се инсталира и креира преку овие настани."]}
+            />
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </Link>
@@ -46,9 +49,10 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
             <img src={coworking} alt=""/>
           </div>
           <div className="txt-div">
-          <h3>Coworking</h3>
-          
-            <p>Биди дел од tech заедницата на иноватори, креативци и претприемачи. Резервирај стол во нашата shared Office. Пичирај го твојот бизнис и нашиот тим заедно ќе одлучи секој месец со кого да ги дели своите канцеларии.</p>
+            <TextDiv 
+            h3="Coworking"
+            text ={["Биди дел од tech заедницата на иноватори, креативци и претприемачи. Резервирај стол во нашата shared Office. Пичирај го твојот бизнис и нашиот тим заедно ќе одлучи секој месец со кого да ги дели своите канцеларии."]}
+            />
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </div>
@@ -57,10 +61,12 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
           <div className="img-div">
             <img src={prostor_za_nastani} alt=""/>
           </div>
+         
           <div className="txt-div">
-          <h3>Просор за Настани</h3>
-          
-            <p>Имаш идеја за обука или настан од tech областа? Ние имаме простор за реализација. Нашиот тим внимателно ги одбира и крира сите настани.</p>
+          <TextDiv 
+          h3="Простор за Настани"
+          text={["Имаш идеја за обука или настан од tech областа? Ние имаме простор за реализација. Нашиот тим внимателно ги одбира и крира сите настани."]}
+          />
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </Link>
@@ -70,9 +76,11 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
             <img src={edukacija1} alt=""/>
           </div>
           <div className="txt-div">
-          <h3>Парнерства со Tech компании</h3>
-          
-            <p>Целта и идејата е креирање на tech заедница која ќе се негува, расте и креира подобро утро за сите нас. Преку директно и индиректно поврзивање на  tech талентите со компаниите.</p>
+            <TextDiv 
+            h3= "Парнерства со Tech компании"
+            text ={["Целта и идејата е креирање на tech заедница која ќе се негува, расте и креира подобро утро за сите нас. Преку директно и индиректно поврзивање на  tech талентите со компаниите."]}
+            />
+        
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </div>
@@ -82,9 +90,10 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
             <img src={edukacija2} alt=""/>
           </div>
           <div className="txt-div">
-          <h3>Иновации за компании</h3>
-          
-            <p>Нов концепт кој ќе им помогне на компаниите да преминат од стариот во новиот начин на работење. Подгответе ја вашата компанија за дигитална трансформација.</p>
+            <TextDiv 
+            h3="Иновации за копмании"
+            text= {["Нов концепт кој ќе им помогне на компаниите да преминат од стариот во новиот начин на работење. Подгответе ја вашата компанија за дигитална трансформација."]}
+            />
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </div>

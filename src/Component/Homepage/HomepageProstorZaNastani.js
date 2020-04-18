@@ -9,7 +9,7 @@ const HomepageProstorZaNastani = () => {
            <div className="edukacija ">
       <div className="txt-div">
           <div className="inside-txt-div">
-              <h1>Едукација</h1>
+              <h1>Простор за настани</h1>
               <p>Можност за презентација, обуки, конференции, networking, настани. Одбери ја просторијата која најмногу ќе одговара на твојата идеја. Го задржуваме правото да одбереме кој настан ќе се организира во нашиот Brainster Space.</p>
             
 

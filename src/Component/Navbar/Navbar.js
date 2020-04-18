@@ -14,7 +14,7 @@ const Navbar = ({setNavbarBtnForma, setPartnerstvaForma}) => {
             <Link to="/nastani">настани</Link>
             <Link>co-working</Link>
             <Link>академии</Link>
-            <Link to="/nastani">простор за настани</Link>
+            <Link to="/prostor_za_nastani">простор за настани</Link>
             <button onClick={() => setPartnerstvaForma(true)}>партнертсва</button>
         </div>
         <button className="navbar-btn" onClick={()=> setNavbarBtnForma(true)}><i className="fas fa-plus"></i>приклучи се</button>

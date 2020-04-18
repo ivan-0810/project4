@@ -10,33 +10,33 @@ const SpaceBlogNavbar = ({toggleFilters, filters, allFilters, toggleAll}) => {
                 onClick={toggleAll}
           >сите</button>
           <button
-                className={filters.КАРИЕРА ? 'active' : null}
-                data-filter="КАРИЕРА"
+                className={filters.КАРИ ? 'active' : null}
+                data-filter="КАРИ"
                 onClick={toggleFilters}
           >кариера</button>
           <button 
-          className={filters.ТЕХНОЛОГИЈА ? 'active' : null}
-          data-filter="ТЕХНОЛОГИЈА"
+          className={filters.ТЕХН ? 'active' : null}
+          data-filter="ТЕХН"
           onClick={toggleFilters}
           >технологија</button>
           <button
-           className={filters.tehnologija ? 'active' : null}
-           data-filter="DATA SCIENCE"
+           className={filters.DATA ? 'active' : null}
+           data-filter="DATA"
            onClick={toggleFilters}
           >Data Science</button>
           <button 
-          className={filters.МАРКЕТИНГ ? 'active' : null}
-          data-filter="МАРКЕТИНГ"
+          className={filters.МАРК ? 'active' : null}
+          data-filter="МАРК"
           onClick={toggleFilters}
           >маркетинг</button>
           <button
-          className={filters.ДИЗАЈН ? 'active' : null}
-          data-filter="ДИЗАЈН"
+          className={filters.ДИЗА ? 'active' : null}
+          data-filter="ДИЗА"
           onClick={toggleFilters}
           >дизајн</button>
           <button
-          className={filters.IMPACT ? 'active' : null}
-          data-filter="IMPACT"
+          className={filters.IMPA ? 'active' : null}
+          data-filter="IMPA"
           onClick={toggleFilters}
           >impact</button>
           <a href="https://medium.com/wearelaika/brainster-space-the-new-home-of-the-local-tech-community-in-skopje-ffe97b564152">#SpaceFamily</a>

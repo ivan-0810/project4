@@ -10,12 +10,12 @@ const SpaceBlog = (props) => {
 
     
     const [filters, setFilters] = useState({
-        КАРИЕРА: false,
-        ТЕХНОЛОГИЈА: false,
-        "DATA SCIENCE": false,
-        МАРКЕТИНГ: false,
-        ДИЗАЈН: false,
-        IMPACT: false
+        КАРИ: false,
+        ТЕХН: false,
+        DATA: false,
+        МАРК: false,
+        ДИЗА: false,
+        IMPA: false
     });
     const [allFilters, setAllFilters] = useState(true);
 
@@ -32,22 +32,20 @@ const SpaceBlog = (props) => {
           }
         
  
-          console.log(allFiltersThatAreActive);
+          console.log(cardsToRender[0].category.substring(0,4));
           const filterKeys = Object.keys(allFiltersThatAreActive);
           
-    let filteredCards = mainData.filter(eachCard => {
-        
+    let filteredCards = mainData.filter(
+        eachCard => {
+            
         return filterKeys.every(key => {
-          if (!allFiltersThatAreActive[key].length) {
+          if (!allFiltersThatAreActive.length) {
             return true;
           }
-
-          return allFiltersThatAreActive[key].includes(eachCard.category[key])
+          return allFiltersThatAreActive.includes(eachCard.category.substring(0,4))
     
         });
       });
-
-      
       setCardsToRender(filteredCards);
       console.log(filteredCards);
     },[filters,mainData]);
@@ -74,12 +72,12 @@ const SpaceBlog = (props) => {
     setAllFilters(true);
 
     setFilters({
-        КАРИЕРА: false,
-        ТЕХНОЛОГИЈА: false,
-        "DATA SCIENCE": false,
-        МАРКЕТИНГ: false,
-        ДИЗАЈН: false,
-        IMPACT: false
+        КАРИ: false,
+        ТЕХН: false,
+        DATA: false,
+        МАРК: false,
+        ДИЗА: false,
+        IMPA: false
     });     
   };
 

@@ -1,0 +1,53 @@
+@import "../../Base";
+.prostor-za-nastani{
+    width: 95%;
+    margin: 20px auto;
+}
+img{
+    width: 100%;
+}
+.txt-div{
+    text-align: left;
+    @extend %flex-column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.box-1,.box-2{
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    margin-bottom: 40px;
+}
+.box-1{
+    .txt-div{
+        flex-basis: 30%;
+     
+      
+        button{
+            margin-top: 40px;
+            border: none;
+            @extend%crnokopce;
+            padding: 10px 30px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 13px;
+            i{
+                margin-right: 10px;
+            }
+        }
+    }
+    .img-div{
+        flex-basis: 60%;
+      
+    }
+}
+.box-2{
+    margin-top: 50px;
+    .txt-div{
+        flex-basis: 25%;
+    }
+    .img-div{
+        flex-basis: 70%;
+    }
+}
