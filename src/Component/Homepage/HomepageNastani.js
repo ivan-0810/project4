@@ -4,20 +4,22 @@ import Nastani1 from "../../sliki/nastani/IMG_7481.jpg";
 import Nastani2 from "../../sliki/nastani/instruktori.jpg";
 import "./HomePage.scss";
 import { Link } from "react-router-dom";
+import TextDiv from '../Prostor_za_nastani/TextDiv';
 
 
 const HomepageNastani = () => {
     return (
-      <div className="homepage-zanas">
+      <div className="box-1">
       <h1>Настани</h1>
         <a href="https://brainster.co/" className="homepage-zanas-card">
           <div className="img-div">
             <img src={Nastani} alt=""/>
           </div>
           <div className="txt-div">
-          <h3>Codeworks</h3>
-          
-            <p>Вистинскиот настан за сите tech таленти кои сакаат да кодираат и да научат што е ново во tech заедницата. Настан кој ги побрзува mid програмерите со IT  компаниите. <br /> Deep Dive Intensive Seminar <br /> Ексклузивни семинари кои комбинираат три различни техники на учење.</p>
+            <TextDiv
+            h3="Codeworks"
+            text ={[`Вистинскиот настан за сите tech таленти кои сакаат да кодираат и да научат што е ново во tech заедницата. Настан кој ги побрзува mid програмерите со IT  компаниите.  ${<br />}Deep Dive Intensive Seminar ${<br />} Ексклузивни семинари кои комбинираат три различни техники на учење.`]}
+            />
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </a>
@@ -26,9 +28,10 @@ const HomepageNastani = () => {
             <img src={Nastani1} alt=""/>
           </div>
           <div className="txt-div">
-          <h3>Deep Dive into Marketing</h3>
-          
-            <p>Deep Dive into Marketing се серија од интензивни семинари кои се наменски подготвени да ти помогнат да ги совладаш и предвидиш современите промени, предизвици и идните трендови во областа во маркетингот.</p>
+            <TextDiv 
+            h3="Deep Dive into Marketing"
+            text ={["Deep Dive into Marketing се серија од интензивни семинари кои се наменски подготвени да ти помогнат да ги совладаш и предвидиш современите промени, предизвици и идните трендови во областа во маркетингот."]}
+            />
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </a>
@@ -37,9 +40,10 @@ const HomepageNastani = () => {
             <img src={Nastani2} alt=""/>
           </div>
           <div className="txt-div">
-          <h3>Deep Dive into Science</h3>
-          
-            <p>Deep Div into Science се серија од интензивни семинари кои се наменски подготвени да ти помогнат да ги совладаш и предвидиш современите промени, предизвици и идните трендови во областа во Data Science</p>
+          <TextDiv 
+            h3="Deep Dive into Science"
+            text ={["Deep Div into Science се серија од интензивни семинари кои се наменски подготвени да ти помогнат да ги совладаш и предвидиш современите промени, предизвици и идните трендови во областа во Data Science"]}
+            />
           </div>
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </a>

@@ -6,8 +6,8 @@ const TextDiv = ({text,h1,h3}) => {
         <Fragment >
             <h3>{h3}</h3>  
             <h1>{h1}</h1>
-            {text.map(txt => (
-                <p>{txt}</p>
+            {text.map((txt,inx) => (
+                <p key={inx}>{txt}</p>
             ))}
            
         </Fragment>

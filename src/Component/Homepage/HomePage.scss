@@ -2,7 +2,10 @@
 h1 {
     font-weight: bold;
 }
-
+.homepage-cont {
+    width: 95%;
+    margin: 0 auto;
+}
 .homepage-header {
     height:85vh;
    
@@ -18,12 +21,12 @@ h1 {
     
   
 }
-.homepage-zanas {
+.box-1 {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 90%;
-    margin: 50px auto;
+
+    margin: 50px 0;
     h1{
         width: 100%;
         margin: 0px auto 50px;
@@ -81,13 +84,12 @@ h1 {
 
 .edukacija {
     display: flex;
-    width: 95%;
-    margin: 50px auto;
+    margin: 50px 0;
     .txt-div {
-        flex-basis: 48%;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
+        flex-basis: 45%;
         padding: 0 40px;
         }
         
@@ -110,7 +112,7 @@ h1 {
 
     
     .img-div{
-        flex-basis: 48%;
+        flex-basis: 55%;
         border-radius: 4px;
         img{
             width: 100%;
@@ -134,12 +136,12 @@ h1 {
     @extend %crnokopce;
     float:right;
     cursor: pointer;
-    color: #FCD232;
+    color: #FCD232!important;
 }
+
+
 .homepage-coworking {
     flex-direction: row-reverse;
-    .inside-txt-div{
-        width: 95%!important;
         .sold-btn {
             padding: 3px 10px;
             margin-bottom: 10px;
@@ -151,7 +153,6 @@ h1 {
         h1,p{
             text-decoration: line-through;
         }
-    }
     .p-text-timer {
         float: left;
         padding: 10px;
@@ -170,6 +171,9 @@ h1 {
     margin-top: 10px!important;
     font-size: 13px!important;
     color: #FCD232!important;
+    .txt-div{
+        padding: 0!important;
+    }
 
      i{
          margin-right: 5px;

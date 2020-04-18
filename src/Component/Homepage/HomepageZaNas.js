@@ -14,11 +14,11 @@ import TextDiv from '../Prostor_za_nastani/TextDiv';
 
 const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
   return (
-    <div className="homepage-zanas">
+    <div className="box-1">
         <h1>За Нас</h1>
         <a href="https://brainster.co/" className="homepage-zanas-card">
           <div className="img-div">
-            <img src={edukacija} alt=""/>
+            <img src={edukacija} alt="edukacija"/>
           </div>
           <div className="txt-div">
             <TextDiv
@@ -32,7 +32,7 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
 
         <Link to="/nastani" className="homepage-zanas-card">
           <div className="img-div">
-            <img src={nastani} alt=""/>
+            <img src={nastani} alt="nastani"/>
           </div>
           <div className="txt-div">
             <TextDiv 
@@ -46,7 +46,7 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
 
         <div className="homepage-zanas-card">
           <div className="img-div">
-            <img src={coworking} alt=""/>
+            <img src={coworking} alt="coworking"/>
           </div>
           <div className="txt-div">
             <TextDiv 
@@ -59,7 +59,7 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
 
         <Link to="/nastani" className="homepage-zanas-card">
           <div className="img-div">
-            <img src={prostor_za_nastani} alt=""/>
+            <img src={prostor_za_nastani} alt="prostor_za_nastani"/>
           </div>
          
           <div className="txt-div">
@@ -73,7 +73,7 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
 
         <div className="homepage-zanas-card" onClick={() => setPartnerstvaForma(true)}>
           <div className="img-div">
-            <img src={edukacija1} alt=""/>
+            <img src={edukacija1} alt="edukacija"/>
           </div>
           <div className="txt-div">
             <TextDiv 
@@ -87,7 +87,7 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
 
         <div className="homepage-zanas-card" onClick={()=>setInovaciiForma(true)}>
           <div className="img-div">
-            <img src={edukacija2} alt=""/>
+            <img src={edukacija2} alt="edukacija"/>
           </div>
           <div className="txt-div">
             <TextDiv 

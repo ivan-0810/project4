@@ -49,5 +49,17 @@ h1{
     }
     .img-div{
         flex-basis: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        div{
+            flex-basis: 30%;
+            .image{
+                height: 160px;
+                img{
+                    height: 100%;
+                }
+            }
+        }
     }
 }

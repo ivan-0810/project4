@@ -21,12 +21,14 @@ const Homepage = () => {
         {partnerstvaForma && <PartnerstvaForma  setPartnerstvaForma={setPartnerstvaForma}/>}
         {inovaciiForma && <InovaciiForma setInovaciiForma={setInovaciiForma} />}
         <HomepageHeader />
+        <div className="homepage-cont">
         <HomepageZaNas  setPartnerstvaForma={setPartnerstvaForma} setInovaciiForma={setInovaciiForma} />
         <Edukacija />
         <HomepageNastani />
         <HomepageCoworking />
         <HomepageProstorZaNastani />
         <Footer />
+        </div>
     </div>
   );
 }
