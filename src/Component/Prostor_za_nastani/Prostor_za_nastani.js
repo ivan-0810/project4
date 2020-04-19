@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import Navbar from '../Navbar/Navbar';
 import "./Prostor_za_nastani.scss";
-import TextDiv from './TextDiv';
+import Footer from "../footer/Footer";
 import p1 from "../../sliki/renderi/2.jpg";
 import p2 from "../../sliki/renderi/C1 1.jpg";
 import p3 from "../../sliki/renderi/C1 4.jpg";
@@ -15,6 +15,7 @@ import Box1 from './Box1';
 import Box2 from './Box2';
 import Box3 from './Box3';
 import Box4 from "./Box4";
+import Box5 from './Box5';
 
 const Prostor_za_nastani = () => {
     const [nasloviSliki] = useState(["Brainster", "Конференциска Сала", "Сала со бина", "Адептибилна училница", "Училница", "Училница", "Хол", "Канцелариски простор", "Space Kitchen"]);
@@ -29,12 +30,15 @@ const Prostor_za_nastani = () => {
         8: p3,
         9: p9
     })
+    const scrolni = ()=>{
+        window.scrollTo(0,2200)
+    }
     return (
         <Fragment>
             <Navbar />
             <div className="prostor-za-nastani">
                 <div className="box-1">
-                    <Box1 />
+                    <Box1 scrolni={scrolni}/>
                 </div>
                 <div className="box-2">
                     <Box2
@@ -48,7 +52,11 @@ const Prostor_za_nastani = () => {
                 <div className="box-4">
                     <Box4 />
                 </div>
+                <div className="box-5">
+                    <Box5 />
+                </div>
 
+                <Footer />
             </div>
         </Fragment>
     );
