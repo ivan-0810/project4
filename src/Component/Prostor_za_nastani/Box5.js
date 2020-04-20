@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import TextDiv from './TextDiv';
-import Anja from "../../sliki/space_blog/9.jpg"
 
 const Box5 = () => {
     return (

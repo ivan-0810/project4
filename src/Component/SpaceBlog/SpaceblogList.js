@@ -1,10 +1,11 @@
 import React from 'react';
 import "../Homepage/HomePage.scss";
 
+
 const SpaceblogList = ({data}) => {
     
     return (
-      <div className="spaceblog-list homepage-zanas">
+      <div className="spaceblog-list box-1">
           {data.map(card => (
               <a key={card.id} href="https://brainster.co/" className="homepage-zanas-card">
               <div  className="img-div" style={{

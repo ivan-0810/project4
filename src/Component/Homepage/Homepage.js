@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Navbar from "../Navbar/Navbar";
 import NavbarBtnForma from "../NavbarBtnForma/NavbarBtnForma";
 import HomepageHeader from "../Homepage/HomepageHeader";
@@ -10,19 +10,21 @@ import HomepageNastani from "./HomepageNastani";
 import HomepageCoworking from './HomepageCoworking';
 import HomepageProstorZaNastani from "./HomepageProstorZaNastani"
 import Footer from '../footer/Footer';
+import { Context } from '../../Context/Context';
+
 const Homepage = () => {
-    const [ navbarBtnForma, setNavbarBtnForma]= useState(false);
-    const [ partnerstvaForma, setPartnerstvaForma] = useState(false);
+  const {partnerstvaForma, navbarBtnForma } = useContext(Context)
+
     const [inovaciiForma, setInovaciiForma] =useState(false)
   return (
     <div className="homepage">
-        <Navbar setNavbarBtnForma={setNavbarBtnForma} setPartnerstvaForma={setPartnerstvaForma} />
-        {navbarBtnForma && <NavbarBtnForma setNavbarBtnForma={setNavbarBtnForma} />}
-        {partnerstvaForma && <PartnerstvaForma  setPartnerstvaForma={setPartnerstvaForma}/>}
+        <Navbar  />
+        {navbarBtnForma && <NavbarBtnForma/>}
+        {partnerstvaForma && <PartnerstvaForma />}
         {inovaciiForma && <InovaciiForma setInovaciiForma={setInovaciiForma} />}
         <HomepageHeader />
         <div className="homepage-cont">
-        <HomepageZaNas  setPartnerstvaForma={setPartnerstvaForma} setInovaciiForma={setInovaciiForma} />
+        <HomepageZaNas  setInovaciiForma={setInovaciiForma} />
         <Edukacija />
         <HomepageNastani />
         <HomepageCoworking />

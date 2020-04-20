@@ -5,7 +5,7 @@ import SpaceblogHeader from './SpaceblogHeader';
 import SpaceblogList from './SpaceblogList';
 const SpaceBlog = (props) => {
     const data = require('../../myArr.json');
-    const [mainData, setMainData] = useState(data)
+    const [mainData ] = useState(data)
     const [cardsToRender, setCardsToRender] = useState(data);
 
     
@@ -31,8 +31,6 @@ const SpaceBlog = (props) => {
             }
           }
         
- 
-          console.log(cardsToRender[0].category.substring(0,4));
           const filterKeys = Object.keys(allFiltersThatAreActive);
           
     let filteredCards = mainData.filter(
@@ -47,8 +45,7 @@ const SpaceBlog = (props) => {
         });
       });
       setCardsToRender(filteredCards);
-      console.log(filteredCards);
-    },[filters,mainData]);
+    },[filters,mainData,]);
 
     useEffect(() => {
         if (cardsToRender.length === mainData.length) {

@@ -1,6 +1,5 @@
 import React from 'react';
 import "./NavbarBtnForma.scss";
-import { Link } from "react-router-dom";
 
 function NavbarBtnForma({setNavbarBtnForma}) {
     return (

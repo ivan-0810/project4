@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import edukacija1 from "../../sliki/za_nas/edukacija1.jpg";
 import edukacija2 from "../../sliki/za_nas/edukacija2.jpg";
 import "./HomePage.scss";

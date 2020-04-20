@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./InovaciiForma.scss";
 
 const InovaciiForma = ({setInovaciiForma}) => {
-    const [ime, setIme] = useState("")
+    const [ime] = useState("")
 const handleSubmit = () => {
     console.log(ime);
     

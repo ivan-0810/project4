@@ -75,6 +75,7 @@
         .button-span{
             display: flex;
             justify-content: space-between;
+            width: 100%;
             span{
                 color: $yellow;
                 font-size: 23px;
@@ -109,6 +110,7 @@
     .space-header-btn {
         display: flex;
         justify-content: flex-end;
+        width: 100%;
         .arrow {
             @extend %arrow-style;
             @extend %flex-center;
@@ -124,7 +126,10 @@
    
   
 }
-
+.spaceblog-list{
+    width: 90%;
+    margin:50px auto;
+}
 .spaceblog-card-btn{
    .space-description{
        position: absolute;

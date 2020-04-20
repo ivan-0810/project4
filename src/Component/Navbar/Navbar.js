@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import Logo from "../../sliki/brainster_space_logo.svg";
+import { Context } from '../../Context/Context';
 
-const Navbar = ({setNavbarBtnForma, setPartnerstvaForma}) => {
+const Navbar = () => {
+  const {setPartnerstvaForma,setNavbarBtnForma} = useContext(Context)
   return (
     <div className="nav-bar">
         <Link to="/" className ="logo">
             <img src={Logo}alt="brainster-logo"/>
         </Link>
         <div className="navbar-links">
-            <Link to="/space-blog" on>space блог</Link>
+            <Link to="/space-blog">space блог</Link>
             <Link to="/nastani">настани</Link>
-            <Link>co-working</Link>
-            <Link>академии</Link>
+            <Link to="/coworking">co-working</Link>
+            <Link to="/akademii">академии</Link>
             <Link to="/prostor_za_nastani">простор за настани</Link>
             <button onClick={() => setPartnerstvaForma(true)}>партнертсва</button>
         </div>
