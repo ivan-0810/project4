@@ -11,8 +11,8 @@ const Box5 = () => {
          />
         </div>
          <div className="img-div" style={{
-                                    backgroundImage: "url(" + require(`../../sliki/space_blog/9.jpg`) + ")",
-                                    backgroundPosition: "center",
+                                    backgroundImage: "url(" + require(`../../sliki/devojka.jpg`) + ")",
+                                    backgroundPosition: "center top",
                                     backgroundSize: "cover"
                                 }}>
 

@@ -4,6 +4,9 @@ import "./Footer.scss";
 
 const Footer = () => {
     const [showContact, setShowContact] = useState(false);
+    const scrollTop = () => {
+        window.scrollTo(0,0)
+    }
     return (
         <div className="footer">
             <div className="korisni-linkovi">
@@ -25,7 +28,7 @@ const Footer = () => {
                     <span><i className="fab fa-instagram instagram"></i></span>
                 </div>
             </div>
-            <div className="logo">
+            <div className="logo" onClick={scrollTop}>
                 <img src={Logo} alt="" />
             </div>
 

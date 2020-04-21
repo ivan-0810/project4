@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Nastani from "../../sliki/nastani/Hristijan-Nosecka-1024x536.jpg";
 import Nastani1 from "../../sliki/nastani/IMG_7481.jpg";
 import Nastani2 from "../../sliki/nastani/instruktori.jpg";
 import "./HomePage.scss";
 import { Link } from "react-router-dom";
 import TextDiv from '../Prostor_za_nastani/TextDiv';
+import { Context } from '../../Context/Context';
 
 
 const HomepageNastani = () => {
+  const {setScrollToNastani} = useContext(Context);
     return (
       <div className="box-1">
       <h1>Настани</h1>
         <a href="https://brainster.co/" className="homepage-zanas-card">
-          <div className="img-div">
-            <img src={Nastani} alt=""/>
+          <div className="img-div" style={{
+            backgroundImage:`url(${Nastani})`,
+            backgroundPosition:"center left",
+            backgroundSize:"cover"
+          }}>
           </div>
           <div className="txt-div">
             <TextDiv
@@ -24,8 +29,12 @@ const HomepageNastani = () => {
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </a>
         <a href="https://brainster.co/" className="homepage-zanas-card">
-          <div className="img-div">
-            <img src={Nastani1} alt=""/>
+          <div className="img-div" style={{
+            backgroundImage:`url(${Nastani1})`,
+            backgroundPosition:"center",
+            backgroundSize:"cover"
+          }}>
+           
           </div>
           <div className="txt-div">
             <TextDiv 
@@ -36,8 +45,11 @@ const HomepageNastani = () => {
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </a>
         <a href="https://brainster.co/" className="homepage-zanas-card">
-          <div className="img-div">
-            <img src={Nastani2} alt=""/>
+          <div className="img-div" style={{
+            backgroundImage:`url(${Nastani2})`,
+            backgroundPosition:"center left",
+            backgroundSize:"cover"
+          }}> 
           </div>
           <div className="txt-div">
           <TextDiv 
@@ -48,7 +60,7 @@ const HomepageNastani = () => {
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </a>
         <div className="div-kalendarKopce">
-        <Link to="/nastani" className ="kalendarKopce"><i className="far fa-calendar-alt"></i> календари на настани</Link>
+        <Link to="/nastani" className ="kalendarKopce" onClick={()=>setScrollToNastani(true)}><i className="far fa-calendar-alt"></i> календари на настани</Link>
         </div>
       </div>
     );

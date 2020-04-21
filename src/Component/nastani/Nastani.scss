@@ -67,11 +67,19 @@
                 background-color: #f3f3f3;
                 padding-bottom: 3px;
                 padding-right: 6px;
-                
+                cursor: pointer;
             }
-            .current-day{
-                background-color: blue;
+         
+            .blue{
+                background-color: #162c9b;
                 color: white;
+                p{
+                    font-size: 8px;
+                    text-align: left;
+                    margin-left: 3px;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
             }
         }
     

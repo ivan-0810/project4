@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import edukacija from "../../sliki/za_nas/edukacija.jpg";
 import edukacija1 from "../../sliki/za_nas/edukacija1.jpg";
 import edukacija2 from "../../sliki/za_nas/edukacija2.jpg";
@@ -6,13 +6,16 @@ import nastani from "../../sliki/za_nas/nastani.jpg";
 import coworking from "../../sliki/za_nas/coworking.jpg";
 import prostor_za_nastani from "../../sliki/za_nas/prostor za nastani.jpg";
 import { Link } from "react-router-dom";
-
-
 import "./HomePage.scss";
 import TextDiv from '../Prostor_za_nastani/TextDiv';
+import { Context } from '../../Context/Context';
 
 
-const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
+const HomepageZaNas = () => {
+  const {setInovaciiForma,setPartnerstvaForma, setScrollToNastani}= useContext(Context)
+  const scrollToCoworking = () => {
+    return window.scrollTo(0, 3200)
+  }
   return (
     <div className="box-1">
         <h1>За Нас</h1>
@@ -30,7 +33,7 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
         </a>
 
 
-        <Link to="/nastani" className="homepage-zanas-card">
+        <Link to="/nastani" className="homepage-zanas-card" onClick={()=>setScrollToNastani(true)}>
           <div className="img-div">
             <img src={nastani} alt="nastani"/>
           </div>
@@ -44,7 +47,7 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
         </Link>
 
 
-        <div className="homepage-zanas-card">
+        <div className="homepage-zanas-card" onClick={scrollToCoworking}>
           <div className="img-div">
             <img src={coworking} alt="coworking"/>
           </div>
@@ -57,7 +60,7 @@ const HomepageZaNas = ({ setPartnerstvaForma,setInovaciiForma }) => {
           <div className="arrow"><span><i className="fas fa-arrow-right"></i></span></div>
         </div>
 
-        <Link to="/nastani" className="homepage-zanas-card">
+        <Link to="/nastani" className="homepage-zanas-card" onClick={()=>setScrollToNastani(true)}>
           <div className="img-div">
             <img src={prostor_za_nastani} alt="prostor_za_nastani"/>
           </div>

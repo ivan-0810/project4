@@ -19,9 +19,7 @@ const Homepage = () => {
     console.log(isCoworking);
     
     return () => {
-      window.addEventListener("scroll", () => setIsCoworking(false));
-      console.log(isCoworking);
-      
+      window.addEventListener("scroll", () => setIsCoworking(false));  
     }
   })  
   return (

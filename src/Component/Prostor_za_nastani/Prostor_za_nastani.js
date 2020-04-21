@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useContext, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
 import "./Prostor_za_nastani.scss";
 import Footer from "../footer/Footer";
@@ -16,8 +16,19 @@ import Box2 from './Box2';
 import Box3 from './Box3';
 import Box4 from "./Box4";
 import Box5 from './Box5';
+import { Context } from '../../Context/Context';
 
 const Prostor_za_nastani = () => {
+    const {scrollToNastani,setScrollToNastani} = useContext(Context)
+    useEffect(() => {
+        if(scrollToNastani){
+            window.scrollTo(0,0)
+        }
+
+        return () => {
+            window.addEventListener("scroll", setScrollToNastani(false))
+        }
+    })
     const [nasloviSliki] = useState(["Brainster", "Конференциска Сала", "Сала со бина", "Адептибилна училница", "Училница", "Училница", "Хол", "Канцелариски простор", "Space Kitchen"]);
     const [sliki] = useState({
         1: p1,

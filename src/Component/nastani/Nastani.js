@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import moment from "moment";
 import Navbar from '../Navbar/Navbar';
 import "./Nastani.scss";
 import Footer from '../footer/Footer';
+import { Context } from '../../Context/Context';
+import TextDiv from "../Prostor_za_nastani/TextDiv";
 
 
 
 const Nastani = (props) => {
+
+  const { scrollToNastani, setScrollToNastani } = useContext(Context);
+  useEffect(()=> {
+    if(scrollToNastani){
+      window.scrollTo(0,0);
+      
+    }
+
+    return () => setScrollToNastani(false)
+  });
+
   const [WeekDays] = useState(["Нед","Пон","Вто","Сре","Чет","Пет","Саб"])
   const [Months] = useState(['Јануари','Февруари','Март','Април','Мај','Јуни','Јули','Август','Септември','Октомври','Ноември','Декември']); 
   const [dateContext, setDateContext] = useState(moment());
@@ -35,12 +48,20 @@ const Nastani = (props) => {
   //polinja so denovidenovi
   let days = []
   for(let i=1; i<=daysInMonth(); i++){
-    let className = (i === parseInt(currentDate) ? "day current-day": "day")
     days.push(
-      <td key={i*20} className={className}>
+      <td key={i*20} className={i==4? "day blue":"day" }>
+        {i==4 && 
+        <TextDiv 
+          text={["Deep Dive into Data Science", "10:00 - 18:00ч","Ден 1"]}
+          h1=""
+          h3=""
+        />
+        }
         {i}
       </td>
     )
+    
+   
   }
   
    let totalSlots = [...blanks,...days];

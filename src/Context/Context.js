@@ -6,8 +6,9 @@ export const Context = createContext({});
 export const Provider = (props) => {
     const [ partnerstvaForma, setPartnerstvaForma] = useState(false);
     const [ navbarBtnForma, setNavbarBtnForma]= useState(false);
-    const [inovaciiForma, setInovaciiForma] =useState(false)
-    const [isCoworking,setIsCoworking] = useState(false)
+    const [inovaciiForma, setInovaciiForma] =useState(false);
+    const [isCoworking,setIsCoworking] = useState(false);
+    const [scrollToNastani, setScrollToNastani] = useState(false);
 const generalData = {
     partnerstvaForma,
     setPartnerstvaForma,
@@ -16,7 +17,9 @@ const generalData = {
     inovaciiForma,
     setInovaciiForma,
     isCoworking,
-    setIsCoworking
+    setIsCoworking,
+    scrollToNastani,
+    setScrollToNastani
 }
     return (
         <Context.Provider value={generalData}>
