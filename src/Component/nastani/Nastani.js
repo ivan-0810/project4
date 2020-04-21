@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import moment from "moment";
 import Navbar from '../Navbar/Navbar';
 import "./Nastani.scss";
+import Footer from '../footer/Footer';
 
 
 
@@ -34,7 +35,7 @@ const Nastani = (props) => {
   //polinja so denovidenovi
   let days = []
   for(let i=1; i<=daysInMonth(); i++){
-    let className = (i == currentDate ? "day current-day": "day")
+    let className = (i === parseInt(currentDate) ? "day current-day": "day")
     days.push(
       <td key={i*20} className={className}>
         {i}
@@ -105,7 +106,6 @@ const prevMonth = () => {
   return (
     <div className="nastani">
       <Navbar />
-   
         <table className="calendar">
           <thead>
             <tr className="calendar-header">
@@ -127,6 +127,7 @@ const prevMonth = () => {
               
           </tbody>
         </table>
+        <Footer />
     </div>
   );
 }

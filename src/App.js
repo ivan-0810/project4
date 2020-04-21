@@ -5,7 +5,6 @@ import Homepage from './Component/Homepage/Homepage';
 import SpaceBlog from "./Component/SpaceBlog/SpaceBlog";
 import Nastani from "./Component/nastani/Nastani";
 import Prostor_za_nastani from "./Component/Prostor_za_nastani/Prostor_za_nastani";
-import Coworking from './Component/Coworking/Coworking';
 import Akademii from './Component/Akademii/Akademii';
 import { Provider } from "./Context/Context";
 
@@ -18,8 +17,7 @@ function App() {
             <Route path="/" exact component={Homepage} />
             <Route path="/space-blog" component={SpaceBlog} />
             <Route path="/nastani" component={Nastani} />
-            <Route path="/prostor_za_nastani" component={Prostor_za_nastani} /> 
-            <Route path="/coworking" component={Coworking} />
+            <Route path="/prostor_za_nastani" component={Prostor_za_nastani} />
             <Route path="/akademii" component={Akademii} />
           </Switch>
         </BrowserRouter>

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./NavbarBtnForma.scss";
+import { Context } from '../../Context/Context';
 
-function NavbarBtnForma({setNavbarBtnForma}) {
+const NavbarBtnForma = () => {
+    const {setNavbarBtnForma} = useContext(Context)
     return (
         <div className="navbar-btn-forma">
 

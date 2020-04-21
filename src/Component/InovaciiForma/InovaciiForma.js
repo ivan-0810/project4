@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import "./InovaciiForma.scss";
+import { Context } from '../../Context/Context';
 
-const InovaciiForma = ({setInovaciiForma}) => {
+const InovaciiForma = () => {
+    const {setInovaciiForma} = useContext(Context)
     const [ime] = useState("")
 const handleSubmit = () => {
     console.log(ime);

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./PartnerstvaForma.scss"
+import { Context } from '../../Context/Context';
 
-const PartnerstvaForma = ({setPartnerstvaForma}) => {
+const PartnerstvaForma = () => {
+     
+    const {setPartnerstvaForma} = useContext(Context)
+
     return (
         <div className="partnerstvaForma">
             <div className="overlay">

@@ -1,9 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navbar from "../Navbar/Navbar";
-import NavbarBtnForma from "../NavbarBtnForma/NavbarBtnForma";
 import HomepageHeader from "../Homepage/HomepageHeader";
 import HomepageZaNas from './HomepageZaNas';
-import PartnerstvaForma from "../ParnerstvaForma/PartnerstvaForma";
 import InovaciiForma from "../InovaciiForma/InovaciiForma";
 import Edukacija from './Edukacija';
 import HomepageNastani from "./HomepageNastani";
@@ -13,18 +11,26 @@ import Footer from '../footer/Footer';
 import { Context } from '../../Context/Context';
 
 const Homepage = () => {
-  const {partnerstvaForma, navbarBtnForma } = useContext(Context)
-
-    const [inovaciiForma, setInovaciiForma] =useState(false)
+  const { inovaciiForma,isCoworking,setIsCoworking } = useContext(Context)
+  console.log(isCoworking);
+  
+  useEffect(() =>{
+    isCoworking && window.scrollTo(0,3200)
+    console.log(isCoworking);
+    
+    return () => {
+      window.addEventListener("scroll", () => setIsCoworking(false));
+      console.log(isCoworking);
+      
+    }
+  })  
   return (
     <div className="homepage">
         <Navbar  />
-        {navbarBtnForma && <NavbarBtnForma/>}
-        {partnerstvaForma && <PartnerstvaForma />}
-        {inovaciiForma && <InovaciiForma setInovaciiForma={setInovaciiForma} />}
+        {inovaciiForma && <InovaciiForma/>}
         <HomepageHeader />
         <div className="homepage-cont">
-        <HomepageZaNas  setInovaciiForma={setInovaciiForma} />
+        <HomepageZaNas/>
         <Edukacija />
         <HomepageNastani />
         <HomepageCoworking />
