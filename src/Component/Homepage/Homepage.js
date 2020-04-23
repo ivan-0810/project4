@@ -13,12 +13,9 @@ import "./HomepageResponsive.scss";
 
 const Homepage = () => {
   const { inovaciiForma,isCoworking,setIsCoworking } = useContext(Context)
-  console.log(isCoworking);
   
   useEffect(() =>{
-    isCoworking && window.scrollTo(0,3200)
-    console.log(isCoworking);
-    
+    isCoworking && window.scrollTo(0,3200)    
     return () => {
       window.addEventListener("scroll", () => setIsCoworking(false));  
     }

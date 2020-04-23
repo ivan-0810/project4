@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import SpaceBlogNavbar from "./SpaceBlogNavbar";
 import SpaceblogHeader from './SpaceblogHeader';
 import SpaceblogList from './SpaceblogList';
+import Footer from "../footer/Footer";
 const SpaceBlog = (props) => {
     const data = require('../../myArr.json');
     const [mainData ] = useState(data)
@@ -88,6 +89,7 @@ const SpaceBlog = (props) => {
                 toggleAll={toggleAll} />
             <SpaceblogHeader data={data} />
             <SpaceblogList data={cardsToRender} />
+            <Footer />
         </div>
     );
 }

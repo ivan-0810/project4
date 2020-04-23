@@ -11,7 +11,6 @@ import "../ParnerstvaForma/PartnerstvaForma.scss";
 const Navbar = () => {
   const { setIsCoworking, setPartnerstvaForma, partnerstvaForma, setNavbarBtnForma, navbarBtnForma } = useContext(Context);
   const [showNavbar, setShowNavbar] = useState(false);
-  console.log(showNavbar);
 
   return (
     <div className="nav-bar" style={showNavbar? {marginBottom:"0"}:{}}>

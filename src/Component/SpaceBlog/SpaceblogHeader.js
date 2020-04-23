@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Spaceblog.scss";
-
+import brainster_logo from "../../sliki/default.png"
 
 const SpaceblogHeader = ({data}) => {
     
@@ -30,6 +30,12 @@ const SpaceblogHeader = ({data}) => {
                 backgroundSize: "cover"
             }} >
                 <div className="overlay">
+                <div className="brainster_logo">
+                   <div>
+                   <img src={brainster_logo} alt=""/>
+                    <p>BRAINSTER</p>
+                   </div>
+                </div>
                 <div className="txt-div">
                 <span className="description">{data[counter-1].category}</span>
                     <h1>{data[counter-1].title}</h1>
@@ -38,11 +44,12 @@ const SpaceblogHeader = ({data}) => {
                     
                     <div className="button-span">
                     <button><i className="fas fa-arrow-right" ></i>дознај повеќе</button>
-                    <span>{counter}/9</span>
+                    <span className="counter-laptop">{counter}/9</span>
                     </div>
 
                     <div className="space-header-btn">
                         <span className="arrow" onClick={decreaseCounter}><i className="fas fa-arrow-left" ></i></span>
+                        <span className="counter-phone">{counter}/9</span>
                         <span className="arrow" onClick={increaseCounter}><i className="fas fa-arrow-right"></i></span>
                     </div>
                 </div>

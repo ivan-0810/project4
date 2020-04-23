@@ -49,8 +49,8 @@ const Nastani = (props) => {
   for (let i = 1; i <= daysInMonth(); i++) {
     days.push(
       <td key={i * 20} 
-      className={(i == 4 || i == 5) && currentMonth === 3 ? "day blue" : "day" && (i === 25 || i === 26) && currentMonth === 3 ? "day red" : "day"}>
-        {i == 4 && currentMonth === 3 &&
+      className={(i ===4 || i === 5) && currentMonth === 3 ? "day blue" : "day" && (i === 25 || i === 26) && currentMonth === 3 ? "day red" : "day"}>
+        {i === 4 && currentMonth === 3 &&
           <div className="txt-div">
             <TextDiv
               text={["Deep Dive into Data Science", "10:00 - 18:00ч", "Ден 1"]}
@@ -59,7 +59,7 @@ const Nastani = (props) => {
             />
           </div>
         }
-         {i == 5 && currentMonth === 3 &&
+         {i === 5 && currentMonth === 3 &&
           <div className="txt-div">
             <TextDiv
               text={["Deep Dive into Data Science", "10:00 - 18:00ч", "Ден 2"]}
