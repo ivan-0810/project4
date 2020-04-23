@@ -85,3 +85,43 @@
         }
     }
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    form {
+        width: 100%!important;
+        .forma-naslov{
+            margin: 20px auto!important;
+            h2{
+                font-size: 25px;
+            }
+            span {
+                width: 20px;
+                height: 20px;
+                i{
+                    font-size: 15px;
+                }
+            }
+        }
+   
+    }
+   
+  }
+  @media only screen and (min-width: 425px) and (max-width: 768px){
+      form{
+          width: 80%!important;
+          .forma-naslov{
+            margin: 20px auto!important;
+            h2{
+                font-size: 25px;
+            }
+            span {
+                width: 20px;
+                height: 20px;
+                i{
+                    font-size: 15px;
+                }
+            }
+        }
+      }
+  }

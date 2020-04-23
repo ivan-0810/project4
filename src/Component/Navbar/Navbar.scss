@@ -59,6 +59,10 @@ $yellow-color:#FCD232;
     }
 }
 @media only screen and (min-width: 320px) and (max-width: 425px) {
+
+    .showNav {
+        display: none!important;
+    }
     .nav-bar {
         flex-direction: column;
         width: 100%;
@@ -72,6 +76,9 @@ $yellow-color:#FCD232;
         }
         .logo img{
             width: 50px;
+        }
+        .navbar-btn1{
+            display: none;
         }
     }
     .sandwich{
@@ -102,14 +109,63 @@ $yellow-color:#FCD232;
         color: black!important;
         font-size: 13px;
     }
-    .showNav {
-        display: none!important;
-    }
+ 
    
 }
 
 
 @media only screen and (min-width: 425px) and (max-width: 768px) {
-
-
+    h1{
+        font-size: 25px;
+    }
+    .nav-bar{
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+    .navbar-tabletOff {
+        display: none;
+    }
+    .showNav {
+        display: none!important;
+    }
+    .logo-sandwich{
+        display: flex;
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-between;
+        .sandwich{
+            display: flex!important;
+            width: 40px;
+            height: 40px;
+            .line {
+                width: 40%;
+                height: 2px
+            }
+        }
+    }
+    .logo{
+        img{
+            width: 40px!important;
+        }
+    }
+    .navbar-links{
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        height: fit-content;
+        padding-bottom: 20px;
+        a,button{
+            color: white!important;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+    .navbar-btn1{
+        display: block;
+        position: absolute;
+        right: 60px;
+        padding: 10px 15px!important;
+        font-size: 13px;
+    }
 }

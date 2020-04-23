@@ -34,9 +34,9 @@ const Navbar = () => {
         <Link to="/akademii">академии</Link>
         <Link to="/prostor_za_nastani">простор за настани</Link>
         <button onClick={() => setPartnerstvaForma(true)}>партнертсва</button>
-        <button className="navbar-btn"  onClick={() => setNavbarBtnForma(true)}><i className="fas fa-plus"></i>приклучи се</button>
+        {showNavbar &&   <button className="navbar-btn navbar-tabletOff"  onClick={() => setNavbarBtnForma(true)}><i className="fas fa-plus"></i>приклучи се</button>}
       </div>
-      {/* <button className={showNavbar ? "navbar-btn":"showNav navbar-btn" }onClick={() => setNavbarBtnForma(true)}><i className="fas fa-plus"></i>приклучи се</button> */}
+      <button className="navbar-btn navbar-btn1" onClick={() => setNavbarBtnForma(true)}><i className="fas fa-plus"></i>приклучи се</button>
     </div>
   );
 }

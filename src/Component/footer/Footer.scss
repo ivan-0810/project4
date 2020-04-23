@@ -26,6 +26,7 @@
              padding: none;
              width: fit-content;
              outline: none;
+             background-color: transparent;
          }
          a {
             text-decoration: none;
@@ -84,13 +85,7 @@
         color: black;
         font-weight: bold;
     }
-    button{
-        font-size: 11px;
-        color:white!important;
-        font-weight: bold;
-        background-color: black;
-        border-radius: 15px;
-    }
+
 }
 .logo {
     cursor: pointer;
@@ -131,4 +126,17 @@
     }
 }
 
+}
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  h4{
+    font-size: 14px;
+  }
+  a, button{
+      font-size: 11px;
+  }
+  .socijalni-mrezi{
+      i{
+          font-size: 25px;
+      }
+  }
 }
