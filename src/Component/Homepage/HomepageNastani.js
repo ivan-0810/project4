@@ -13,7 +13,7 @@ const HomepageNastani = () => {
     return (
       <div className="box-1">
       <h1>Настани</h1>
-        <a href="https://brainster.co/" className="homepage-zanas-card">
+        <a href="https://brainster.co/" className="homepage-zanas-card first-child">
           <div className="img-div" style={{
             backgroundImage:`url(${Nastani})`,
             backgroundPosition:"center left",
@@ -47,7 +47,7 @@ const HomepageNastani = () => {
         <a href="https://brainster.co/" className="homepage-zanas-card">
           <div className="img-div" style={{
             backgroundImage:`url(${Nastani2})`,
-            backgroundPosition:"center left",
+            backgroundPosition:"center",
             backgroundSize:"cover"
           }}> 
           </div>

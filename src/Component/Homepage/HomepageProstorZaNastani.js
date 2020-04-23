@@ -23,7 +23,7 @@ const HomepageProstorZaNastani = () => {
               </div>
       </div>
       <div className="img-div">
-        <img src={ProstorZaNastani} alt="" />}
+        <img src={ProstorZaNastani} alt="" />
        
       </div>
 

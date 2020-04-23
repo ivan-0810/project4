@@ -9,6 +9,7 @@ import HomepageCoworking from './HomepageCoworking';
 import HomepageProstorZaNastani from "./HomepageProstorZaNastani"
 import Footer from '../footer/Footer';
 import { Context } from '../../Context/Context';
+import "./HomepageResponsive.scss";
 
 const Homepage = () => {
   const { inovaciiForma,isCoworking,setIsCoworking } = useContext(Context)
