@@ -114,6 +114,14 @@ const Nastani = (props) => {
   })
 
   let trElems = rows.map((d, i) => {
+    if(i===rows.length-1 && d.length!== 7){
+      let r= rows[i];
+      for(let i=r.length; i<=6; i++){
+        r.push(
+          <td key={i} className="emty-fields"></td>
+        )
+      }
+    }
     return <tr key={i * 100} className="days">
       {d}
     </tr>
@@ -177,6 +185,19 @@ const Nastani = (props) => {
 
         </tbody>
       </table>
+      <div className="sledni-nastani">
+        <h3>Следни настани</h3>
+        <div className="sledni-nastani-blue">
+          <TextDiv 
+           text={["04/05.03.2020","Deep Dive into Data Science","10.00-18.00ч"]}
+          />
+        </div>
+        <div className="sledni-nastani-red">
+        <TextDiv 
+           text={["25/26.03.2020","Deep Dive into Marketing","10.00-18.00ч"]}
+          />
+        </div>
+      </div>
       <Footer />
     </div>
   );

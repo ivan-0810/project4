@@ -14,18 +14,23 @@
     border-radius: 8px;
     width: 50px;
     height: 50px;
-    .line1{
-        width: 60%;
+    .line-one{
+        width: 40px;
+        color:#FCD232;
+            height: 3px;
+             margin-bottom: 5px;
     }
-    .line2  {
-        width: 40%;
+    .line-two  {
+        width: 30px;
     }
-    .line3{
-        width: 20%;
+    .line-three{
+        width: 20px;
     }
-    .line1,.line2,.line3{
-        color:#FCD232!important;
-        height: 3px;    }
+    // .line-one,.line-two,.line-three{
+    //     color:#FCD232;
+    //     height: 3px;
+    //     margin-bottom: 5px;
+    // }
 }
 .spaceblog-navbar {
     width: 65%;
@@ -267,4 +272,50 @@
        }
    } 
 
+}
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .navbar-links{
+        margin-top: 10px;
+    }
+    .spaceblog-navbar{
+        width: 90%!important;
+        margin: 0;
+        padding: 15px 0!important;
+        p{
+            display: none;
+        }
+        button,a{
+            font-size: 9px!important;
+            padding: 0 4px;
+        }
+    }
+    .spaceblog-header{
+        height: 75vh;
+        .brainster_logo{
+            padding-top: 20px;
+            padding-bottom: 30px!important;
+        }
+        .txt-div{
+            width: 90%!important;
+        }
+        .button-span{
+            flex-direction: column;
+            button{
+                width: 35%;
+            }
+            .counter-laptop{
+                font-size: 15px!important;
+                width: 84%!important;
+                text-align: right;
+            }
+        }
+        .space-header-btn{
+            span{
+                margin: 10px!important;
+            }
+        }
+    }
+    .spaceblog-list{
+        width: 95%!important;
+    }
 }

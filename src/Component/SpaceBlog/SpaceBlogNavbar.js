@@ -6,9 +6,9 @@ const SpaceBlogNavbar = ({ toggleFilters, filters, allFilters, toggleAll }) => {
       return (
            <Fragment>
              <div className="spaceblog-sandwich" onClick={() => setShowNavbar(!showNavbar)}>
-                  <div className="line1"></div>
-                  <div className="line2"></div>
-                  <div className="line3"></div>
+                  <div className="line-one"></div>
+                  <div className="line-two"></div>
+                  <div className="line-three"></div>
             </div>
             <div className={showNavbar? "spaceblog-navbar": "shownav spaceblog-navbar"}>
            
