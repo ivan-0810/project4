@@ -25,7 +25,6 @@ const Nastani = (props) => {
   const [dateContext, setDateContext] = useState(moment());
   const [currentMonth, setCurrentMonth] = useState(moment().month())
   const [currentYear, setCurrentYear] = useState(2020);
-  console.log(currentMonth);
 
   const daysInMonth = () => {
     return dateContext.daysInMonth();
@@ -178,7 +177,7 @@ const Nastani = (props) => {
         <tbody>
           <tr>
             {WeekDays.map(day => (
-              <td key={day} className="week-day">{day}</td>
+              <td key={day} className="week-day"><p>{day}</p></td>
             ))}
           </tr>
           {trElems}
